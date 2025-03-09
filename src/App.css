@@ -1,0 +1,43 @@
+@import "tailwindcss";
+.nav-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #FFFFFF; /* Ensure text color is explicitly set */
+}
+
+.download-btn {
+  background: #019987;
+  width: 170px;
+  height: 47px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.add-to-chrome-btn {
+  background-color:#00B49F7D;
+  border: 1px solid #FFFFFF;
+  width: 185px;
+  height: 47px;
+  padding: 16px 10px;
+  border-radius: 6px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.avtar-icon{
+  background-color:#00B49F7D;
+}
+#add-to-chrome-btn{
+  background-color:#019987;
+}
