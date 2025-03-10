@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logoIcon from '../assets/logo.svg';
 import icon1 from '../assets/icon1.svg';
 import crossIcon from '../assets/crossIcon.svg';
@@ -6,11 +6,12 @@ import img1 from '../assets/img1.svg'
 import img2 from '../assets/img2.svg'
 import img3 from '../assets/img3.svg'
 export default function Section1() {
+  const [showBanner,setShowBanner] = useState(true)
   return (
     <div
-      className='h-[1001px] w-[1440px] bg-gradient-to-b from-[#00CAB2] to-[#00554A]'
+      className='h-[1001px] w-[100vw] bg-gradient-to-b from-[#00CAB2] to-[#00554A]'
     >
-      <div className='h-[1001.03px] w-[1200px]'>
+      <div className='h-[1001.03px] w-full'>
         {/* Navigation Bar */}
         <div className='h-[95px] w-full bg-[var(--color-cyan-3549,#00B49F7D)]'>
           <div className='h-full w-full flex items-center px-[20px]'>
@@ -46,41 +47,40 @@ export default function Section1() {
         </div>
 
         {/* Content Section */}
+        {showBanner && (
         <div
-          className='h-[118px] w-[1038px] relative top-[119px] left-[81px] bg-[#FFFFFF] rounded-[10px] flex items-center p-[20px] gap-[20px]'
+          className="h-[118px] w-[1038px] relative top-[119px] left-[81px] bg-[#FFFFFF] rounded-[10px] flex items-center p-[20px] gap-[20px]"
           style={{
             boxShadow:
-              'var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-200)',
+              "var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-200)",
           }}
         >
           <div
-            className='absolute top-[10px] right-[10px] cursor-pointer text-[#000000] text-[16px] font-bold'
+            className="absolute top-[10px] right-[10px] cursor-pointer text-[#000000] text-[16px] font-bold"
+            onClick={() => setShowBanner(false)}
           >
-            <img src={crossIcon} alt='Close Icon' />
+            <img src={crossIcon} alt="Close Icon" />
           </div>
 
           <div>
-            <div
-              className='text-[24px] mt-[-40px] pt-[28px] leading-[28.8px] font-[600] tracking-[0%] font-sans text-[#000000]'
-            >
+            <div className="text-[24px] mt-[-40px] pt-[28px] leading-[28.8px] font-[600] tracking-[0%] font-sans text-[#000000]">
               Enable iGrammar Chrome extension wherever you type
             </div>
 
-            <div
-              className='w-[460px] h-[45px] text-[13px] leading-[15px] font-[400] tracking-[0%] text-[#000000] mt-[8px]'
-            >
+            <div className="w-[460px] h-[45px] text-[13px] leading-[15px] font-[400] tracking-[0%] text-[#000000] mt-[8px]">
               Use it on Gmail, Facebook, Twitter, <span>Linkedin</span>,
               <span> Slack</span>, and thousands of other websites.
             </div>
           </div>
 
           <button
-            id='add-to-chrome-btn'
-            className='w-[170px] h-[47px] rounded-[6px] bg-[#019987] text-white text-[14px] font-[500] ml-auto mr-[36px]'
+            id="add-to-chrome-btn"
+            className="w-[170px] h-[47px] rounded-[6px] bg-[#019987] text-white text-[14px] font-[500] ml-auto mr-[36px]"
           >
             Add To Chrome
           </button>
         </div>
+      )}
         <div className='h-[761.03px] w-[670.28px] top-[193px] pt-[72px]'>
         <div className='h-[352px] w-[670.28px] flex justify-center items-center'>
   <div
